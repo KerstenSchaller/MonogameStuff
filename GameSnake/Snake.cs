@@ -28,7 +28,7 @@ namespace SnakeGame
 
         public int ApplesEaten { get { return applesEaten; } }
 
-        public Snake(Texture2D _segmentTexture, Direction _direction,Vector2 startPos, int startGrowth, int _segmentId = 0) : base(true)
+        public Snake(Texture2D _segmentTexture, Direction _direction, Vector2 startPos, int startGrowth, int _segmentId = 0) : base(true)
         {
             segmentTexture = _segmentTexture;
             direction = _direction;

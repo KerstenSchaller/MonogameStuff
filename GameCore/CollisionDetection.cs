@@ -1,10 +1,12 @@
 ﻿
 
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using System;
 
 namespace GameCore
 {
-    class CollisionDetection
+    public class CollisionDetection
     {
         public static bool getAxisAlignedRectangleCollision(Rectangle rect1, Rectangle rect2)
         {
@@ -22,19 +24,45 @@ namespace GameCore
             }
         }
 
+
+        /* This stuff was nonsense but maybe some codesnippets can be reused later */
+        /*
+        public static Int32 returnWorldFrameMask(VisualComponent component1)
+        {
+            // get color pixel wise
+            Texture2D texture = component1.SegmentTexture;
+            int dataLength = texture.Width * texture.Height;
+
+            Color[] retrievedColors = new Color[dataLength];
+            bool[] mask = new bool[dataLength];
+
+            texture.GetData<Color>(retrievedColors);
+
+            for (int i = 0; i < retrievedColors.Length; i++)
+            {
+                if (retrievedColors[i] == new Color(255, 255, 255, 255))
+                {
+                    // white pixel
+                    mask[i] = false;
+                }
+                else 
+                {
+                    mask[i] = true;
+                }
+            }
+
+        }
+
+        private Int32 setSingleBit(int index, int value) 
+        {
+            return value = value | (0b1 << index);
+        }
+
         public static bool getPixelPerfectSpriteCollision(VisualComponent component1, VisualComponent component2) 
         {
-            Rectangle sourceRectangle = new Rectangle((int)component1.Position.X, (int)component1.Position.Y, component1.SegmentTexture.Width, component1.SegmentTexture.Height); ;
-            Color[] retrievedColor = new Color[1];
-
-            component1.SegmentTexture.GetData<Color>(
-                                                        0,
-                                                        sourceRectangle,
-                                                        retrievedColor,
-                                                        0,
-                                                        1);
             return false;
         }
+        */
 
     }
 }

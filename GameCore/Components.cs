@@ -40,6 +40,8 @@ namespace GameCore
             collidable = false;
         }
 
+
+
         public VisualComponent(bool _collidable)
         {
             collidable = _collidable;
@@ -58,12 +60,38 @@ namespace GameCore
             {
                 Rectangle rect1 = new Rectangle((int)this.Position.X, (int)this.Position.Y, this.SegmentTexture.Width, this.segmentTexture.Height);
                 Rectangle rect2 = new Rectangle((int)otherComponent.Position.X, (int)otherComponent.Position.Y, otherComponent.SegmentTexture.Width, otherComponent.segmentTexture.Height);
+                
+                
                 return CollisionDetection.getAxisAlignedRectangleCollision(rect1, rect2);
+                
 
             }
         }
 
         
+
+
+    }
+
+
+    public class StaticVisualComponent : VisualComponent
+    {
+        public StaticVisualComponent(Texture2D _segmentTexture) : base(true)
+        {
+            segmentTexture = _segmentTexture;
+            position = new Vector2(0, 0);
+        }
+
+        public StaticVisualComponent(Texture2D _segmentTexture, Vector2 startPos) : base(true)
+        {
+            segmentTexture = _segmentTexture;
+            position = startPos;
+        }
+
+        public override void updateComponent(float elapsedTimeSeconds)
+        {
+            // no need to update staticComonent
+        }
     }
 
 

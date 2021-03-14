@@ -44,6 +44,18 @@
 /processorParam:TextureFormat=Compressed
 /build:File.spritefont;Arial.spritefont
 
+#begin minipriteCross.bmp
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:minipriteCross.bmp;miniPixelCross.bmp
+
 #begin segment.bmp
 /importer:TextureImporter
 /processor:TextureProcessor

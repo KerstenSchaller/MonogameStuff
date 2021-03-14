@@ -34,6 +34,9 @@ namespace SnakeGame
             ComponentManager.attachComponent(pointsLabel);
             ComponentManager.attachComponent(label);
             //ComponentManager.attachComponent(coordinatesLabel);
+
+
+
         }
 
         private void SpawnAppleRandomly() 
